@@ -98,7 +98,7 @@
               <children xmi:type="notation:DecorationNode" xmi:id="_yuTWzGDDEfGY0qGQ08NUOw" type="5025">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_yuTWzWDDEfGY0qGQ08NUOw" y="5"/>
               </children>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yuTWzmDDEfGY0qGQ08NUOw" x="469" y="82"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yuTWzmDDEfGY0qGQ08NUOw" x="598" y="110"/>
             </children>
           </children>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_yuTWz2DDEfGY0qGQ08NUOw"/>
