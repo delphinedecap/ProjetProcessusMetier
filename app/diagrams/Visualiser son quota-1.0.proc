@@ -18,7 +18,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_yuTWjmDDEfGY0qGQ08NUOw" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_yuTWj2DDEfGY0qGQ08NUOw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_yuTWkGDDEfGY0qGQ08NUOw">
-            <targetForm xmi:type="expression:Expression" xmi:id="_ifKQIGYuEfGz1Ym7HCRQpA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_7CilsGY2EfG2XcJ39Idavg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_yuTWkmDDEfGY0qGQ08NUOw"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_yuTWk2DDEfGY0qGQ08NUOw" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -37,12 +37,14 @@
         </filters>
       </elements>
       <data xmi:type="process:BusinessObjectData" xmi:id="_j--dEGYuEfG2XcJ39Idavg" name="selfQuota" dataType="_yuTWvGDDEfGY0qGQ08NUOw" className="com.company.model.QuotaCarbone">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_j--dEWYuEfG2XcJ39Idavg" name="init_selfQuota()" content="def quotas = quotaCarboneDAO.findByAgent(user.id, 0, 1)&#xD;&#xA;&#xD;&#xA;if (quotas == null || quotas.isEmpty()) {&#xD;&#xA;&#x9;return quotaCarboneDAO.newInstance(user.id, 1000000.0)&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;return quotas.get(0)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.QuotaCarbone">
-          <referencedElements xmi:type="expression:Expression" xmi:id="_pSgzQGYuEfG2XcJ39Idavg" name="quotaCarboneDAO" content="quotaCarboneDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.QuotaCarboneDAO" returnTypeFixed="true"/>
+        <defaultValue xmi:type="expression:Expression" xmi:id="_j--dEWYuEfG2XcJ39Idavg" name="init_selfQuota()" content="def processInitiatorId = apiAccessor.getProcessAPI()&#xD;&#xA;    .getProcessInstance(processInstanceId)&#xD;&#xA;    .getStartedBy()&#xD;&#xA;&#xD;&#xA;def quotas = quotaCarboneDAO.findByAgent(processInitiatorId, 0, 1)&#xD;&#xA;&#xD;&#xA;if (quotas == null || quotas.isEmpty()) {&#xD;&#xA;    return quotaCarboneDAO.newInstance(processInitiatorId, 1000000.0)&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;return quotas.get(0)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.QuotaCarbone">
+          <referencedElements xmi:type="expression:Expression" xmi:id="_UcYi0GY3EfG2XcJ39Idavg" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+          <referencedElements xmi:type="expression:Expression" xmi:id="_UcYi0WY3EfG2XcJ39Idavg" name="quotaCarboneDAO" content="quotaCarboneDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.QuotaCarboneDAO" returnTypeFixed="true"/>
+          <referencedElements xmi:type="expression:Expression" xmi:id="_UcYi0mY3EfG2XcJ39Idavg" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
         </defaultValue>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_yuTWmGDDEfGY0qGQ08NUOw">
-        <targetForm xmi:type="expression:Expression" xmi:id="_ifKQIWYuEfGz1Ym7HCRQpA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_7CilsWY2EfG2XcJ39Idavg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_yuTWmmDDEfGY0qGQ08NUOw">
         <targetForm xmi:type="expression:Expression" xmi:id="_yuTWm2DDEfGY0qGQ08NUOw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
