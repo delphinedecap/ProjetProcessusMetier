@@ -23,15 +23,51 @@
               <inputTypes>java.util.Collection</inputTypes>
             </operator>
           </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_mdIfkmZEEfG2XcJ39Idavg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_mdIfk2ZEEfG2XcJ39Idavg" name="mesDemandes" content="mesDemandes" type="TYPE_VARIABLE" returnType="java.util.List">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_mdIflGZEEfG2XcJ39Idavg" name="mesDemandes" multiple="true" dataType="_98b4hGDCEfGY0qGQ08NUOw" className="com.company.model.Mission"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_mdIflWZEEfG2XcJ39Idavg" name="mesDemandesInput" content="def missionList = []&#xD;&#xA;//For each item collected in multiple input&#xD;&#xA;mesDemandesInput.each{&#xD;&#xA;&#x9;//Add Mission instance&#xD;&#xA;&#x9;missionList.add({ currentMissionInput ->&#xD;&#xA;&#x9;&#x9;def missionVar = mesDemandes.find { it.persistenceId.toString() == currentMissionInput.persistenceId_string} ?: new com.company.model.Mission()&#xD;&#xA;&#x9;&#x9;missionVar.projet = currentMissionInput.projet&#xD;&#xA;&#x9;&#x9;missionVar.lieu = currentMissionInput.lieu&#xD;&#xA;&#x9;&#x9;missionVar.dateDebut = currentMissionInput.dateDebut&#xD;&#xA;&#x9;&#x9;missionVar.dateFin = currentMissionInput.dateFin&#xD;&#xA;&#x9;&#x9;missionVar.coutCarbone = currentMissionInput.coutCarbone?.toFloat()&#xD;&#xA;&#x9;&#x9;missionVar.demandeur = currentMissionInput.demandeur?.trim() ? currentMissionInput.demandeur.toLong() : null&#xD;&#xA;&#x9;&#x9;missionVar.manager = currentMissionInput.manager?.trim() ? currentMissionInput.manager.toLong() : null&#xD;&#xA;&#x9;&#x9;missionVar.statut = currentMissionInput.statut&#xD;&#xA;&#x9;&#x9;missionVar.dateDemande = currentMissionInput.dateDemande&#xD;&#xA;&#x9;&#x9;missionVar.dateValidation = currentMissionInput.dateValidation&#xD;&#xA;&#x9;&#x9;missionVar.besoinDoubleApprobation = currentMissionInput.besoinDoubleApprobation&#xD;&#xA;&#x9;&#x9;missionVar.choixRSE = currentMissionInput.choixRSE&#xD;&#xA;&#x9;&#x9;missionVar.choixManager = currentMissionInput.choixManager&#xD;&#xA;&#x9;&#x9;missionVar.decisionCollegiale = currentMissionInput.decisionCollegiale&#xD;&#xA;&#x9;&#x9;return missionVar&#xD;&#xA;&#x9;}(it))&#xD;&#xA;}&#xD;&#xA;return missionList" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_mdIflmZEEfG2XcJ39Idavg" name="mesDemandesInput" type="COMPLEX" multiple="true"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_mdIfl2ZEEfG2XcJ39Idavg" name="mesDemandes" multiple="true" dataType="_98b4hGDCEfGY0qGQ08NUOw" className="com.company.model.Mission"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_mdIfmGZEEfG2XcJ39Idavg" type="ASSIGNMENT" expression="addAll">
+              <inputTypes>java.util.Collection</inputTypes>
+            </operator>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_98b4W2DCEfGY0qGQ08NUOw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_98b4XGDCEfGY0qGQ08NUOw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_98b4XWDCEfGY0qGQ08NUOw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_98b4XmDCEfGY0qGQ08NUOw" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_98b4X2DCEfGY0qGQ08NUOw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_98b4YGDCEfGY0qGQ08NUOw">
-            <targetForm xmi:type="expression:Expression" xmi:id="_QoQTcGZDEfG2XcJ39Idavg" name="newForm1" content="3854785d-23f4-408f-8452-c66630fca0c3" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_Xg-sgGZIEfG2XcJ39Idavg" name="mesDemandesDeMission" content="242662dd-5d2d-4b0f-ba11-af3f90449560" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
-          <contract xmi:type="process:Contract" xmi:id="_98b4YmDCEfGY0qGQ08NUOw"/>
+          <contract xmi:type="process:Contract" xmi:id="_98b4YmDCEfGY0qGQ08NUOw">
+            <inputs xmi:type="process:ContractInput" xmi:id="_mdH4gGZEEfG2XcJ39Idavg" name="mesDemandesInput" type="COMPLEX" multiple="true" dataReference="mesDemandes" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_mdH4gWZEEfG2XcJ39Idavg" name="persistenceId_string" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_mdH4gmZEEfG2XcJ39Idavg" name="projet" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_mdH4g2ZEEfG2XcJ39Idavg" name="lieu" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_mdH4hGZEEfG2XcJ39Idavg" name="dateDebut" type="LOCALDATE" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_mdH4hWZEEfG2XcJ39Idavg" name="dateFin" type="LOCALDATE" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_mdH4hmZEEfG2XcJ39Idavg" name="coutCarbone" type="DECIMAL" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_mdH4h2ZEEfG2XcJ39Idavg" name="demandeur" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_mdH4iGZEEfG2XcJ39Idavg" name="manager" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_mdH4iWZEEfG2XcJ39Idavg" name="statut" type="INTEGER" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_mdH4imZEEfG2XcJ39Idavg" name="dateDemande" type="LOCALDATE" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_mdH4i2ZEEfG2XcJ39Idavg" name="dateValidation" type="LOCALDATE" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_mdH4jGZEEfG2XcJ39Idavg" name="besoinDoubleApprobation" type="BOOLEAN" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_mdH4jWZEEfG2XcJ39Idavg" name="choixRSE" type="BOOLEAN" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_mdH4jmZEEfG2XcJ39Idavg" name="choixManager" type="BOOLEAN" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_mdH4j2ZEEfG2XcJ39Idavg" name="decisionCollegiale" type="BOOLEAN" createMode="false"/>
+            </inputs>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_mdIfkGZEEfG2XcJ39Idavg" expression="mesDemandesInput?.demandeur.flatten().findAll().every{ it.isLong() }" errorMessage="A Long value is expected for Mission.demandeur" name="type_long_mesDemandesInput_demandeur">
+              <inputNames>mesDemandesInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_mdIfkWZEEfG2XcJ39Idavg" expression="mesDemandesInput?.manager.flatten().findAll().every{ it.isLong() }" errorMessage="A Long value is expected for Mission.manager" name="type_long_mesDemandesInput_manager">
+              <inputNames>mesDemandesInput</inputNames>
+            </constraints>
+          </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_98b4Y2DCEfGY0qGQ08NUOw" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
         <elements xmi:type="process:EndEvent" xmi:id="_Wu3QIGDDEfGY0qGQ08NUOw" name="Fin1" incoming="_XeIw8GDDEfGY0qGQ08NUOw">
@@ -53,7 +89,7 @@
         </defaultValue>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_98b4ZGDCEfGY0qGQ08NUOw">
-        <targetForm xmi:type="expression:Expression" xmi:id="_8TkZoGY_EfG2XcJ39Idavg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_UI8HwGZKEfG2XcJ39Idavg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_98b4ZmDCEfGY0qGQ08NUOw">
         <targetForm xmi:type="expression:Expression" xmi:id="_98b4Z2DCEfGY0qGQ08NUOw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
