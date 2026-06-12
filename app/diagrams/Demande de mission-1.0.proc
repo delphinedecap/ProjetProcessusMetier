@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:decision="http://www.bonitasoft.org/ns/bpm/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/bpm/process" xmlns:transitions="http://www.bonitasoft.org/ns/bpm/process/decision/transitions">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:connectorconfiguration="http://www.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/bpm/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/bpm/process" xmlns:transitions="http://www.bonitasoft.org/ns/bpm/process/decision/transitions">
   <process:MainProcess xmi:id="_itTuMGC6EfGBNIeFX62lDQ" name="Demande de mission" bonitaModelVersion="8">
     <elements xmi:type="process:Pool" xmi:id="_itTuMWC6EfGBNIeFX62lDQ" name="Demande de mission">
       <elements xmi:type="process:Lane" xmi:id="_Pc1bsGC9EfGBNIeFX62lDQ" name="Agent" actor="_v-SfQGC-EfGBNIeFX62lDQ">
@@ -109,7 +109,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_itTuPmC6EfGBNIeFX62lDQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_itTuP2C6EfGBNIeFX62lDQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_itTuQGC6EfGBNIeFX62lDQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_ZSXGMGYqEfG2XcJ39Idavg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_QodbsGYrEfG2XcJ39Idavg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_itTuQmC6EfGBNIeFX62lDQ">
             <inputs xmi:type="process:ContractInput" xmi:id="_DOYBIGDFEfGBNIeFX62lDQ" name="missionInput" type="COMPLEX" dataReference="mission" createMode="false">
@@ -223,7 +223,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_ELfFA2YoEfG2XcJ39Idavg" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_ELfFAmYoEfG2XcJ39Idavg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_ELfFBWYoEfG2XcJ39Idavg">
-            <targetForm xmi:type="expression:Expression" xmi:id="_ZSXGMWYqEfG2XcJ39Idavg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_QodbsWYrEfG2XcJ39Idavg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_ELfFBGYoEfG2XcJ39Idavg">
             <inputs xmi:type="process:ContractInput" xmi:id="_o57i4GYoEfG2XcJ39Idavg" name="missionInput" type="COMPLEX" dataReference="mission" createMode="false">
@@ -247,6 +247,13 @@
           </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_ELfFB2YoEfG2XcJ39Idavg" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
+        <filters xmi:type="process:ActorFilter" xmi:id="__TQ1AGYrEfG2XcJ39Idavg" name="Single user" definitionId="bonita-actorfilter-initiator" definitionVersion="1.0">
+          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="__TQ1AWYrEfG2XcJ39Idavg" definitionId="bonita-actorfilter-initiator" version="1.0">
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="__TQ1AmYrEfG2XcJ39Idavg" key="autoAssign">
+              <expression xmi:type="expression:Expression" xmi:id="__TQ1A2YrEfG2XcJ39Idavg" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+            </parameters>
+          </configuration>
+        </filters>
       </elements>
       <data xmi:type="process:BusinessObjectData" xmi:id="_jZDVsGDBEfGBNIeFX62lDQ" name="mission" dataType="_itTuZGC6EfGBNIeFX62lDQ" className="com.company.model.Mission">
         <defaultValue xmi:type="expression:Expression" xmi:id="_jZDVsWDBEfGBNIeFX62lDQ" name="init_mission()" content="missionDAO.newInstance()" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.Mission">
@@ -261,7 +268,7 @@
         </defaultValue>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_itTuRGC6EfGBNIeFX62lDQ">
-        <targetForm xmi:type="expression:Expression" xmi:id="_ZSXGMmYqEfG2XcJ39Idavg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_QodbsmYrEfG2XcJ39Idavg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_itTuRmC6EfGBNIeFX62lDQ">
         <targetForm xmi:type="expression:Expression" xmi:id="_itTuR2C6EfGBNIeFX62lDQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
