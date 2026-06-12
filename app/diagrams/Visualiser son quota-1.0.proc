@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:decision="http://www.bonitasoft.org/ns/bpm/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/bpm/process">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:connectorconfiguration="http://www.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/bpm/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/bpm/process">
   <process:MainProcess xmi:id="_yuTWgGDDEfGY0qGQ08NUOw" name="Visualiser son quota" bonitaModelVersion="8">
-    <elements xmi:type="process:Pool" xmi:id="_yuTWgWDDEfGY0qGQ08NUOw" name="Poola">
+    <elements xmi:type="process:Pool" xmi:id="_yuTWgWDDEfGY0qGQ08NUOw" name="Visualiser son quota">
       <elements xmi:type="process:Lane" xmi:id="_yuTWgmDDEfGY0qGQ08NUOw" name="Agent" actor="_yuTWo2DDEfGY0qGQ08NUOw">
         <elements xmi:type="process:StartEvent" xmi:id="_yuTWg2DDEfGY0qGQ08NUOw" name="Démarrer1" outgoing="_yuTWnGDDEfGY0qGQ08NUOw">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_yuTWhGDDEfGY0qGQ08NUOw" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_yuTWhWDDEfGY0qGQ08NUOw" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_yuTWhmDDEfGY0qGQ08NUOw" name="" content="" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:Task" xmi:id="_yuTWh2DDEfGY0qGQ08NUOw" name="Visualiser mon quota" outgoing="_yuTWn2DDEfGY0qGQ08NUOw" incoming="_yuTWnGDDEfGY0qGQ08NUOw" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_yuTWh2DDEfGY0qGQ08NUOw" name="Visualiser mon quota" outgoing="_vR47wGYuEfG2XcJ39Idavg" incoming="_yuTWnGDDEfGY0qGQ08NUOw" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_yuTWiGDDEfGY0qGQ08NUOw" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_yuTWiWDDEfGY0qGQ08NUOw" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_yuTWimDDEfGY0qGQ08NUOw" name="" content="" returnTypeFixed="true"/>
@@ -23,12 +23,24 @@
           <contract xmi:type="process:Contract" xmi:id="_yuTWkmDDEfGY0qGQ08NUOw"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_yuTWk2DDEfGY0qGQ08NUOw" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:EndEvent" xmi:id="_yuTWlGDDEfGY0qGQ08NUOw" name="Fin1" incoming="_yuTWn2DDEfGY0qGQ08NUOw">
+        <elements xmi:type="process:EndEvent" xmi:id="_yuTWlGDDEfGY0qGQ08NUOw" name="Fin1" incoming="_vR47wGYuEfG2XcJ39Idavg">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_yuTWlWDDEfGY0qGQ08NUOw" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_yuTWlmDDEfGY0qGQ08NUOw" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_yuTWl2DDEfGY0qGQ08NUOw" name="" content="" returnTypeFixed="true"/>
         </elements>
+        <filters xmi:type="process:ActorFilter" xmi:id="_c20uoGYuEfG2XcJ39Idavg" name="Initiateur" definitionId="bonita-actorfilter-initiator" definitionVersion="1.0">
+          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_c20uoWYuEfG2XcJ39Idavg" definitionId="bonita-actorfilter-initiator" version="1.0">
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_c20uomYuEfG2XcJ39Idavg" key="autoAssign">
+              <expression xmi:type="expression:Expression" xmi:id="_c20uo2YuEfG2XcJ39Idavg" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+            </parameters>
+          </configuration>
+        </filters>
       </elements>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_j--dEGYuEfG2XcJ39Idavg" name="selfQuota" dataType="_yuTWvGDDEfGY0qGQ08NUOw" className="com.company.model.QuotaCarbone">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_j--dEWYuEfG2XcJ39Idavg" name="init_selfQuota()" content="def quotas = quotaCarboneDAO.findByAgent(user.id, 0, 1)&#xD;&#xA;&#xD;&#xA;if (quotas == null || quotas.isEmpty()) {&#xD;&#xA;&#x9;return quotaCarboneDAO.newInstance(user.id, 1000000.0)&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;return quotas.get(0)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.QuotaCarbone">
+          <referencedElements xmi:type="expression:Expression" xmi:id="_pSgzQGYuEfG2XcJ39Idavg" name="quotaCarboneDAO" content="quotaCarboneDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.QuotaCarboneDAO" returnTypeFixed="true"/>
+        </defaultValue>
+      </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_yuTWmGDDEfGY0qGQ08NUOw">
         <targetForm xmi:type="expression:Expression" xmi:id="_yuTWmWDDEfGY0qGQ08NUOw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
@@ -39,9 +51,9 @@
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_yuTWnWDDEfGY0qGQ08NUOw"/>
         <condition xmi:type="expression:Expression" xmi:id="_yuTWnmDDEfGY0qGQ08NUOw" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
-      <connections xmi:type="process:SequenceFlow" xmi:id="_yuTWn2DDEfGY0qGQ08NUOw" target="_yuTWlGDDEfGY0qGQ08NUOw" source="_yuTWh2DDEfGY0qGQ08NUOw">
-        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_yuTWoGDDEfGY0qGQ08NUOw"/>
-        <condition xmi:type="expression:Expression" xmi:id="_yuTWoWDDEfGY0qGQ08NUOw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_vR47wGYuEfG2XcJ39Idavg" target="_yuTWlGDDEfGY0qGQ08NUOw" source="_yuTWh2DDEfGY0qGQ08NUOw">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_vR5i0GYuEfG2XcJ39Idavg"/>
+        <condition xmi:type="expression:Expression" xmi:id="_vR5i0WYuEfG2XcJ39Idavg" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_yuTWomDDEfGY0qGQ08NUOw" documentation="Ceci est un exemple d'acteur associé à tous les utilisateurs d'ACME" name="Employee actor" initiator="true"/>
       <actors xmi:type="process:Actor" xmi:id="_yuTWo2DDEfGY0qGQ08NUOw" name="Agent"/>
@@ -98,7 +110,7 @@
               <children xmi:type="notation:DecorationNode" xmi:id="_yuTWzGDDEfGY0qGQ08NUOw" type="5025">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_yuTWzWDDEfGY0qGQ08NUOw" y="5"/>
               </children>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yuTWzmDDEfGY0qGQ08NUOw" x="598" y="110"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yuTWzmDDEfGY0qGQ08NUOw" x="598" y="82"/>
             </children>
           </children>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_yuTWz2DDEfGY0qGQ08NUOw"/>
@@ -122,13 +134,14 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_yuTW3WDDEfGY0qGQ08NUOw" fontName="Segoe UI"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yuTW3mDDEfGY0qGQ08NUOw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
     </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_yuTW32DDEfGY0qGQ08NUOw" type="4001" element="_yuTWn2DDEfGY0qGQ08NUOw" source="_yuTWxGDDEfGY0qGQ08NUOw" target="_yuTWy2DDEfGY0qGQ08NUOw" roundedBendpointsRadius="10" routing="Rectilinear">
-      <children xmi:type="notation:DecorationNode" xmi:id="_yuTW4GDDEfGY0qGQ08NUOw" type="6001">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_yuTW4WDDEfGY0qGQ08NUOw" y="-10"/>
+    <edges xmi:type="notation:Connector" xmi:id="_vR6w8GYuEfG2XcJ39Idavg" type="4001" element="_vR47wGYuEfG2XcJ39Idavg" source="_yuTWxGDDEfGY0qGQ08NUOw" target="_yuTWy2DDEfGY0qGQ08NUOw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_vR7_EGYuEfG2XcJ39Idavg" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_vR7_EWYuEfG2XcJ39Idavg" y="-10"/>
       </children>
-      <styles xmi:type="notation:FontStyle" xmi:id="_yuTW4mDDEfGY0qGQ08NUOw" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yuTW42DDEfGY0qGQ08NUOw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yuTW5GDDEfGY0qGQ08NUOw" id="(1.0,0.32954545454545453)"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_vR6w8WYuEfG2XcJ39Idavg" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_vR6w8mYuEfG2XcJ39Idavg" points="[0, 9, -266, 0]$[262, 9, -4, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vR_CYGYuEfG2XcJ39Idavg" id="(1.0,0.3181818181818182)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vR_pcGYuEfG2XcJ39Idavg" id="(0.13333333333333333,0.5)"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>
