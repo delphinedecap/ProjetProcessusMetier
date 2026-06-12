@@ -617,7 +617,7 @@
   <memberships>
     <membership>
       <userName>william.jobs</userName>
-      <roleName>member</roleName>
+      <roleName>Manager</roleName>
       <groupName>acme</groupName>
     </membership>
     <membership>
@@ -737,8 +737,12 @@
     <membership>
       <userName>anthony.nichols</userName>
       <roleName>member</roleName>
-      <groupName>north_america</groupName>
-      <groupParentPath>/acme/sales</groupParentPath>
+      <groupName>acme</groupName>
+    </membership>
+    <membership>
+      <userName>william.jobs</userName>
+      <roleName>member</roleName>
+      <groupName>acme</groupName>
     </membership>
   </memberships>
 </organization:Organization>

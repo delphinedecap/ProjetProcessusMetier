@@ -1,0 +1,1038 @@
+{
+  "id" : "newForm3",
+  "name" : "newForm3",
+  "type" : "form",
+  "uuid" : "42a18ea9-0846-4bc5-8b6f-c115bd35aab5",
+  "modelVersion" : "2.6",
+  "lastUpdate" : 1781254987164,
+  "description" : "Page generated with Bonita UI designer",
+  "rows" : [
+    [
+      {
+        "type" : "formContainer",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : { },
+        "reference" : "f49f6766-d89b-4d22-913a-3ac668cc3941",
+        "hasValidationError" : false,
+        "id" : "pbFormContainer",
+        "container" : {
+          "type" : "container",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : { },
+          "reference" : "39914219-a166-4ec5-afa0-d91352f3eba7",
+          "hasValidationError" : false,
+          "id" : "pbContainer",
+          "rows" : [
+            [
+              {
+                "type" : "container",
+                "dimension" : {
+                  "md" : 12,
+                  "sm" : 12,
+                  "xs" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "repeatedCollection" : {
+                    "type" : "variable"
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "dimension" : {
+                    "type" : "constant",
+                    "value" : 12
+                  }
+                },
+                "reference" : "e0219359-a8a0-4712-983b-8d1f7507c219",
+                "hasValidationError" : false,
+                "id" : "pbContainer",
+                "description" : "Auto generate ui for business object \"com.company.model.QuotaCarbone\"",
+                "rows" : [
+                  [
+                    {
+                      "type" : "container",
+                      "dimension" : {
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "repeatedCollection" : {
+                          "type" : "variable"
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        }
+                      },
+                      "reference" : "1e95b493-7f08-4493-904c-e5c5eb38dd71",
+                      "hasValidationError" : false,
+                      "id" : "pbContainer",
+                      "description" : "Auto generate ui for business object \"com.company.model.QuotaCarbone\"",
+                      "rows" : [
+                        [
+                          {
+                            "type" : "container",
+                            "dimension" : {
+                              "xs" : 12
+                            },
+                            "propertyValues" : { },
+                            "reference" : "f87ffe54-c841-4421-8c8b-daeab0bea9a8",
+                            "hasValidationError" : false,
+                            "id" : "pbContainer",
+                            "description" : "\"com.company.model.QuotaCarbone\" object from \"quotaCarbone_1\" variable",
+                            "rows" : [
+                              [
+                                {
+                                  "type" : "component",
+                                  "dimension" : {
+                                    "md" : 12,
+                                    "sm" : 12,
+                                    "xs" : 12,
+                                    "lg" : 12
+                                  },
+                                  "propertyValues" : {
+                                    "hidden" : {
+                                      "type" : "constant",
+                                      "value" : false
+                                    },
+                                    "level" : {
+                                      "type" : "constant",
+                                      "value" : "Level 4"
+                                    },
+                                    "cssClasses" : {
+                                      "type" : "constant",
+                                      "value" : ""
+                                    },
+                                    "text" : {
+                                      "type" : "interpolation",
+                                      "value" : "QuotaCarbone"
+                                    },
+                                    "alignment" : {
+                                      "type" : "constant",
+                                      "value" : "left"
+                                    },
+                                    "dimension" : {
+                                      "type" : "constant",
+                                      "value" : 12
+                                    }
+                                  },
+                                  "reference" : "dbf89e6a-1e83-487c-b22a-fa622b56f85b",
+                                  "hasValidationError" : false,
+                                  "id" : "pbTitle",
+                                  "description" : ""
+                                }
+                              ],
+                              [
+                                {
+                                  "type" : "component",
+                                  "dimension" : {
+                                    "md" : 12,
+                                    "sm" : 12,
+                                    "xs" : 12,
+                                    "lg" : 12
+                                  },
+                                  "propertyValues" : {
+                                    "headers" : {
+                                      "type" : "constant",
+                                      "value" : [
+                                        "Agent",
+                                        "Montant"
+                                      ]
+                                    },
+                                    "allowHtml" : {
+                                      "type" : "constant",
+                                      "value" : true
+                                    },
+                                    "hidden" : {
+                                      "type" : "constant",
+                                      "value" : false
+                                    },
+                                    "cssClasses" : {
+                                      "type" : "constant",
+                                      "value" : ""
+                                    },
+                                    "caption" : {
+                                      "type" : "constant"
+                                    },
+                                    "condensed" : {
+                                      "type" : "constant",
+                                      "value" : false
+                                    },
+                                    "bordered" : {
+                                      "type" : "constant",
+                                      "value" : false
+                                    },
+                                    "selectedRow" : {
+                                      "type" : "variable",
+                                      "value" : "quotaCarbone_1_selected"
+                                    },
+                                    "columnsKey" : {
+                                      "type" : "constant",
+                                      "value" : [
+                                        "agent",
+                                        "montant"
+                                      ]
+                                    },
+                                    "dimension" : {
+                                      "type" : "constant",
+                                      "value" : 12
+                                    },
+                                    "content" : {
+                                      "type" : "expression",
+                                      "value" : "quotaCarbone_1"
+                                    },
+                                    "zebraStriping" : {
+                                      "type" : "constant",
+                                      "value" : true
+                                    }
+                                  },
+                                  "reference" : "9c5a33d9-6e2d-47e8-99f8-497f1c0b6047",
+                                  "hasValidationError" : false,
+                                  "id" : "pbTable",
+                                  "description" : ""
+                                }
+                              ],
+                              [
+                                {
+                                  "type" : "container",
+                                  "dimension" : {
+                                    "md" : 12,
+                                    "sm" : 12,
+                                    "xs" : 12,
+                                    "lg" : 12
+                                  },
+                                  "propertyValues" : {
+                                    "repeatedCollection" : {
+                                      "type" : "variable"
+                                    },
+                                    "hidden" : {
+                                      "type" : "constant",
+                                      "value" : false
+                                    },
+                                    "cssClasses" : {
+                                      "type" : "constant",
+                                      "value" : ""
+                                    },
+                                    "dimension" : {
+                                      "type" : "constant",
+                                      "value" : 12
+                                    }
+                                  },
+                                  "reference" : "3e666b39-36fb-4794-9a95-388a8be52f42",
+                                  "hasValidationError" : false,
+                                  "id" : "pbContainer",
+                                  "description" : "Auto generate ui for business object \"com.company.model.QuotaCarbone\"",
+                                  "rows" : [
+                                    [
+                                      {
+                                        "type" : "container",
+                                        "dimension" : {
+                                          "xs" : 12
+                                        },
+                                        "propertyValues" : { },
+                                        "reference" : "c344aa9f-1453-49a1-ad08-45b0f7f6c57e",
+                                        "hasValidationError" : false,
+                                        "id" : "pbContainer",
+                                        "description" : "\"com.company.model.QuotaCarbone\" object from \"quotaCarbone_2\" variable",
+                                        "rows" : [
+                                          [
+                                            {
+                                              "type" : "component",
+                                              "dimension" : {
+                                                "md" : 12,
+                                                "sm" : 12,
+                                                "xs" : 12,
+                                                "lg" : 12
+                                              },
+                                              "propertyValues" : {
+                                                "hidden" : {
+                                                  "type" : "constant",
+                                                  "value" : false
+                                                },
+                                                "level" : {
+                                                  "type" : "constant",
+                                                  "value" : "Level 4"
+                                                },
+                                                "cssClasses" : {
+                                                  "type" : "constant",
+                                                  "value" : ""
+                                                },
+                                                "text" : {
+                                                  "type" : "interpolation",
+                                                  "value" : "QuotaCarbone"
+                                                },
+                                                "alignment" : {
+                                                  "type" : "constant",
+                                                  "value" : "left"
+                                                },
+                                                "dimension" : {
+                                                  "type" : "constant",
+                                                  "value" : 12
+                                                }
+                                              },
+                                              "reference" : "3d1512c1-3c89-4d99-9a0d-be9b33e53257",
+                                              "hasValidationError" : false,
+                                              "id" : "pbTitle",
+                                              "description" : ""
+                                            }
+                                          ],
+                                          [
+                                            {
+                                              "type" : "component",
+                                              "dimension" : {
+                                                "md" : 12,
+                                                "sm" : 12,
+                                                "xs" : 12,
+                                                "lg" : 12
+                                              },
+                                              "propertyValues" : {
+                                                "headers" : {
+                                                  "type" : "constant",
+                                                  "value" : [
+                                                    "Agent",
+                                                    "Montant"
+                                                  ]
+                                                },
+                                                "allowHtml" : {
+                                                  "type" : "constant",
+                                                  "value" : true
+                                                },
+                                                "hidden" : {
+                                                  "type" : "constant",
+                                                  "value" : false
+                                                },
+                                                "cssClasses" : {
+                                                  "type" : "constant",
+                                                  "value" : ""
+                                                },
+                                                "caption" : {
+                                                  "type" : "constant"
+                                                },
+                                                "condensed" : {
+                                                  "type" : "constant",
+                                                  "value" : false
+                                                },
+                                                "bordered" : {
+                                                  "type" : "constant",
+                                                  "value" : false
+                                                },
+                                                "selectedRow" : {
+                                                  "type" : "variable",
+                                                  "value" : "quotaCarbone_2_selected"
+                                                },
+                                                "columnsKey" : {
+                                                  "type" : "constant",
+                                                  "value" : [
+                                                    "agent",
+                                                    "montant"
+                                                  ]
+                                                },
+                                                "dimension" : {
+                                                  "type" : "constant",
+                                                  "value" : 12
+                                                },
+                                                "content" : {
+                                                  "type" : "expression",
+                                                  "value" : "quotaCarbone_2"
+                                                },
+                                                "zebraStriping" : {
+                                                  "type" : "constant",
+                                                  "value" : true
+                                                },
+                                                "allowHTML" : {
+                                                  "type" : "constant",
+                                                  "value" : false
+                                                },
+                                                "striped" : {
+                                                  "type" : "constant",
+                                                  "value" : true
+                                                }
+                                              },
+                                              "reference" : "67ef3a46-901d-4e12-8bb8-6e92babb2536",
+                                              "hasValidationError" : false,
+                                              "id" : "pbTable",
+                                              "description" : ""
+                                            }
+                                          ],
+                                          [
+                                            {
+                                              "type" : "container",
+                                              "dimension" : {
+                                                "md" : 1,
+                                                "sm" : 1,
+                                                "xs" : 1,
+                                                "lg" : 1
+                                              },
+                                              "propertyValues" : {
+                                                "repeatedCollection" : {
+                                                  "type" : "variable"
+                                                },
+                                                "hidden" : {
+                                                  "type" : "expression",
+                                                  "value" : "!quotaCarbone_2_selected"
+                                                },
+                                                "cssClasses" : {
+                                                  "type" : "constant",
+                                                  "value" : ""
+                                                },
+                                                "dimension" : {
+                                                  "type" : "constant",
+                                                  "value" : 1
+                                                }
+                                              },
+                                              "reference" : "3b79122e-f220-4b24-9e4b-c5a4bdd31ca6",
+                                              "hasValidationError" : false,
+                                              "id" : "pbContainer",
+                                              "rows" : [
+                                                [ ]
+                                              ]
+                                            },
+                                            {
+                                              "type" : "container",
+                                              "dimension" : {
+                                                "md" : 11,
+                                                "sm" : 11,
+                                                "xs" : 11,
+                                                "lg" : 11
+                                              },
+                                              "propertyValues" : {
+                                                "repeatedCollection" : {
+                                                  "type" : "variable"
+                                                },
+                                                "hidden" : {
+                                                  "type" : "expression",
+                                                  "value" : "!quotaCarbone_2_selected"
+                                                },
+                                                "cssClasses" : {
+                                                  "type" : "constant",
+                                                  "value" : ""
+                                                },
+                                                "dimension" : {
+                                                  "type" : "constant",
+                                                  "value" : 11
+                                                }
+                                              },
+                                              "reference" : "119a79c7-da08-4ed9-9b3d-0cec8007a486",
+                                              "hasValidationError" : false,
+                                              "id" : "pbContainer",
+                                              "description" : "Display \"QuotaCarbone\" details when a line is selected in the table above",
+                                              "rows" : [
+                                                [
+                                                  {
+                                                    "type" : "component",
+                                                    "dimension" : {
+                                                      "md" : 12,
+                                                      "sm" : 12,
+                                                      "xs" : 12,
+                                                      "lg" : 12
+                                                    },
+                                                    "propertyValues" : {
+                                                      "labelHidden" : {
+                                                        "type" : "constant",
+                                                        "value" : false
+                                                      },
+                                                      "hidden" : {
+                                                        "type" : "expression",
+                                                        "value" : "!quotaCarbone_2_selected.agent"
+                                                      },
+                                                      "labelPosition" : {
+                                                        "type" : "constant",
+                                                        "value" : "top"
+                                                      },
+                                                      "cssClasses" : {
+                                                        "type" : "constant",
+                                                        "value" : ""
+                                                      },
+                                                      "labelWidth" : {
+                                                        "type" : "constant",
+                                                        "value" : 1
+                                                      },
+                                                      "readOnly" : {
+                                                        "type" : "constant",
+                                                        "value" : true
+                                                      },
+                                                      "label" : {
+                                                        "type" : "interpolation",
+                                                        "value" : "Agent"
+                                                      },
+                                                      "placeholder" : {
+                                                        "type" : "constant"
+                                                      },
+                                                      "type" : {
+                                                        "type" : "constant",
+                                                        "value" : "number"
+                                                      },
+                                                      "dimension" : {
+                                                        "type" : "constant",
+                                                        "value" : 12
+                                                      },
+                                                      "value" : {
+                                                        "type" : "variable",
+                                                        "value" : "quotaCarbone_2_selected.agent"
+                                                      },
+                                                      "required" : {
+                                                        "type" : "constant",
+                                                        "value" : true
+                                                      },
+                                                      "allowHTML" : {
+                                                        "type" : "constant",
+                                                        "value" : false
+                                                      },
+                                                      "minLength" : {
+                                                        "type" : "constant",
+                                                        "value" : ""
+                                                      },
+                                                      "maxLength" : {
+                                                        "type" : "constant",
+                                                        "value" : ""
+                                                      },
+                                                      "debounce" : {
+                                                        "type" : "constant",
+                                                        "value" : 0
+                                                      },
+                                                      "min" : {
+                                                        "type" : "constant"
+                                                      },
+                                                      "max" : {
+                                                        "type" : "constant"
+                                                      },
+                                                      "step" : {
+                                                        "type" : "constant",
+                                                        "value" : 1
+                                                      }
+                                                    },
+                                                    "reference" : "4c3d3b70-d340-49bd-a5d8-f95690bb956d",
+                                                    "hasValidationError" : false,
+                                                    "id" : "pbInput",
+                                                    "description" : ""
+                                                  }
+                                                ],
+                                                [
+                                                  {
+                                                    "type" : "component",
+                                                    "dimension" : {
+                                                      "md" : 12,
+                                                      "sm" : 12,
+                                                      "xs" : 12,
+                                                      "lg" : 12
+                                                    },
+                                                    "propertyValues" : {
+                                                      "labelHidden" : {
+                                                        "type" : "constant",
+                                                        "value" : false
+                                                      },
+                                                      "hidden" : {
+                                                        "type" : "expression",
+                                                        "value" : "!quotaCarbone_2_selected.montant"
+                                                      },
+                                                      "labelPosition" : {
+                                                        "type" : "constant",
+                                                        "value" : "top"
+                                                      },
+                                                      "cssClasses" : {
+                                                        "type" : "constant",
+                                                        "value" : ""
+                                                      },
+                                                      "labelWidth" : {
+                                                        "type" : "constant",
+                                                        "value" : 1
+                                                      },
+                                                      "readOnly" : {
+                                                        "type" : "constant",
+                                                        "value" : true
+                                                      },
+                                                      "label" : {
+                                                        "type" : "interpolation",
+                                                        "value" : "Montant"
+                                                      },
+                                                      "placeholder" : {
+                                                        "type" : "constant"
+                                                      },
+                                                      "type" : {
+                                                        "type" : "constant",
+                                                        "value" : "number"
+                                                      },
+                                                      "dimension" : {
+                                                        "type" : "constant",
+                                                        "value" : 12
+                                                      },
+                                                      "value" : {
+                                                        "type" : "variable",
+                                                        "value" : "quotaCarbone_2_selected.montant"
+                                                      },
+                                                      "required" : {
+                                                        "type" : "constant",
+                                                        "value" : true
+                                                      }
+                                                    },
+                                                    "reference" : "d980157b-d697-45f5-8c04-cd8fb06e9943",
+                                                    "hasValidationError" : false,
+                                                    "id" : "pbInput",
+                                                    "description" : ""
+                                                  }
+                                                ]
+                                              ]
+                                            }
+                                          ]
+                                        ]
+                                      }
+                                    ]
+                                  ]
+                                }
+                              ],
+                              [
+                                {
+                                  "type" : "container",
+                                  "dimension" : {
+                                    "md" : 1,
+                                    "sm" : 1,
+                                    "xs" : 1,
+                                    "lg" : 1
+                                  },
+                                  "propertyValues" : {
+                                    "repeatedCollection" : {
+                                      "type" : "variable"
+                                    },
+                                    "hidden" : {
+                                      "type" : "expression",
+                                      "value" : "!quotaCarbone_1_selected"
+                                    },
+                                    "cssClasses" : {
+                                      "type" : "constant",
+                                      "value" : ""
+                                    },
+                                    "dimension" : {
+                                      "type" : "constant",
+                                      "value" : 1
+                                    }
+                                  },
+                                  "reference" : "38f8f19b-5397-436b-be2d-5d7bff204088",
+                                  "hasValidationError" : false,
+                                  "id" : "pbContainer",
+                                  "rows" : [
+                                    [ ]
+                                  ]
+                                },
+                                {
+                                  "type" : "container",
+                                  "dimension" : {
+                                    "md" : 11,
+                                    "sm" : 11,
+                                    "xs" : 11,
+                                    "lg" : 11
+                                  },
+                                  "propertyValues" : {
+                                    "repeatedCollection" : {
+                                      "type" : "variable"
+                                    },
+                                    "hidden" : {
+                                      "type" : "expression",
+                                      "value" : "!quotaCarbone_1_selected"
+                                    },
+                                    "cssClasses" : {
+                                      "type" : "constant",
+                                      "value" : ""
+                                    },
+                                    "dimension" : {
+                                      "type" : "constant",
+                                      "value" : 11
+                                    }
+                                  },
+                                  "reference" : "76320ecc-6fc5-4920-b691-03e1e16c3d45",
+                                  "hasValidationError" : false,
+                                  "id" : "pbContainer",
+                                  "description" : "Display \"QuotaCarbone\" details when a line is selected in the table above",
+                                  "rows" : [
+                                    [
+                                      {
+                                        "type" : "component",
+                                        "dimension" : {
+                                          "md" : 12,
+                                          "sm" : 12,
+                                          "xs" : 12,
+                                          "lg" : 12
+                                        },
+                                        "propertyValues" : {
+                                          "labelHidden" : {
+                                            "type" : "constant",
+                                            "value" : false
+                                          },
+                                          "hidden" : {
+                                            "type" : "expression",
+                                            "value" : "!quotaCarbone_1_selected.agent"
+                                          },
+                                          "labelPosition" : {
+                                            "type" : "constant",
+                                            "value" : "top"
+                                          },
+                                          "cssClasses" : {
+                                            "type" : "constant",
+                                            "value" : ""
+                                          },
+                                          "labelWidth" : {
+                                            "type" : "constant",
+                                            "value" : 1
+                                          },
+                                          "readOnly" : {
+                                            "type" : "constant",
+                                            "value" : true
+                                          },
+                                          "label" : {
+                                            "type" : "interpolation",
+                                            "value" : "Agent"
+                                          },
+                                          "placeholder" : {
+                                            "type" : "constant"
+                                          },
+                                          "type" : {
+                                            "type" : "constant",
+                                            "value" : "number"
+                                          },
+                                          "dimension" : {
+                                            "type" : "constant",
+                                            "value" : 12
+                                          },
+                                          "value" : {
+                                            "type" : "variable",
+                                            "value" : "quotaCarbone_1_selected.agent"
+                                          },
+                                          "required" : {
+                                            "type" : "constant",
+                                            "value" : true
+                                          }
+                                        },
+                                        "reference" : "607d5ab7-faaf-4b54-863e-f171dd7c08e7",
+                                        "hasValidationError" : false,
+                                        "id" : "pbInput",
+                                        "description" : ""
+                                      }
+                                    ],
+                                    [
+                                      {
+                                        "type" : "component",
+                                        "dimension" : {
+                                          "md" : 12,
+                                          "sm" : 12,
+                                          "xs" : 12,
+                                          "lg" : 12
+                                        },
+                                        "propertyValues" : {
+                                          "labelHidden" : {
+                                            "type" : "constant",
+                                            "value" : false
+                                          },
+                                          "hidden" : {
+                                            "type" : "expression",
+                                            "value" : "!quotaCarbone_1_selected.montant"
+                                          },
+                                          "labelPosition" : {
+                                            "type" : "constant",
+                                            "value" : "top"
+                                          },
+                                          "cssClasses" : {
+                                            "type" : "constant",
+                                            "value" : ""
+                                          },
+                                          "labelWidth" : {
+                                            "type" : "constant",
+                                            "value" : 1
+                                          },
+                                          "readOnly" : {
+                                            "type" : "constant",
+                                            "value" : true
+                                          },
+                                          "label" : {
+                                            "type" : "interpolation",
+                                            "value" : "Montant"
+                                          },
+                                          "placeholder" : {
+                                            "type" : "constant"
+                                          },
+                                          "type" : {
+                                            "type" : "constant",
+                                            "value" : "number"
+                                          },
+                                          "dimension" : {
+                                            "type" : "constant",
+                                            "value" : 12
+                                          },
+                                          "value" : {
+                                            "type" : "variable",
+                                            "value" : "quotaCarbone_1_selected.montant"
+                                          },
+                                          "required" : {
+                                            "type" : "constant",
+                                            "value" : true
+                                          }
+                                        },
+                                        "reference" : "5bcbcd94-21fc-4767-8579-998a37ed2bd9",
+                                        "hasValidationError" : false,
+                                        "id" : "pbInput",
+                                        "description" : ""
+                                      }
+                                    ]
+                                  ]
+                                }
+                              ]
+                            ]
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                ]
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "md" : 12,
+                  "sm" : 12,
+                  "xs" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "removeItem" : {
+                    "type" : "variable"
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "buttonStyle" : {
+                    "type" : "constant",
+                    "value" : "primary"
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "Submit"
+                  },
+                  "dataToSend" : {
+                    "type" : "expression",
+                    "value" : "formOutput"
+                  },
+                  "dataFromError" : {
+                    "type" : "variable",
+                    "value" : "formOutput._submitError"
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "collectionPosition" : {
+                    "type" : "constant"
+                  },
+                  "targetUrlOnSuccess" : {
+                    "type" : "interpolation",
+                    "value" : "/bonita"
+                  },
+                  "action" : {
+                    "type" : "constant",
+                    "value" : "Start process"
+                  },
+                  "collectionToModify" : {
+                    "type" : "variable"
+                  },
+                  "valueToAdd" : {
+                    "type" : "expression"
+                  },
+                  "disabled" : {
+                    "type" : "expression",
+                    "value" : "$form.$invalid"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "center"
+                  },
+                  "dimension" : {
+                    "type" : "constant",
+                    "value" : 12
+                  }
+                },
+                "reference" : "1868a258-efa7-4832-b1e9-6a4c223c04dc",
+                "hasValidationError" : false,
+                "id" : "pbButton",
+                "description" : ""
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "md" : 12,
+                  "sm" : 12,
+                  "xs" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "allowHtml" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "hidden" : {
+                    "type" : "expression",
+                    "value" : "!formOutput._submitError.message"
+                  },
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : "alert alert-danger col-lg-6 col-lg-offset-3"
+                  },
+                  "label" : {
+                    "type" : "interpolation"
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "<strong>Debug message</strong>\n<br/>\n{{formOutput._submitError.message}}\n{{submit_errors_list}}"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "left"
+                  },
+                  "dimension" : {
+                    "type" : "constant",
+                    "value" : 12
+                  }
+                },
+                "reference" : "238d602d-8805-4f55-9b38-a5cc5c1e6873",
+                "hasValidationError" : false,
+                "id" : "pbText",
+                "description" : ""
+              }
+            ]
+          ]
+        }
+      }
+    ]
+  ],
+  "variables" : {
+    "formInput" : {
+      "type" : "json",
+      "value" : [
+        "{ }"
+      ],
+      "exposed" : false
+    },
+    "submit_errors_list" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.formOutput && $data.formOutput._submitError && $data.formOutput._submitError.explanations){",
+        "\tconst liElements = $data.formOutput._submitError.explanations",
+        "\t\t.filter(cause => cause !== null)",
+        "\t\t.map(cause => \"<li>\" + cause + \"</li>\")",
+        "\t\t.join('');",
+        "\tif(liElements){",
+        "\t\treturn \"<ul>\" + liElements + \"</ul>\";",
+        "\t}",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "formOutput" : {
+      "type" : "expression",
+      "value" : [
+        "return {",
+        "",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "quotaCarbone" : {
+      "type" : "businessdata",
+      "value" : [
+        "{\"displayValue\":\"findByAgent [com.company.model.QuotaCarbone]\",\"businessObjectName\":\"QuotaCarbone\",\"query\":{\"name\":\"findByAgent\",\"displayName\":\"findByAgent\"},\"id\":\"com.company.model.QuotaCarbone\",\"filters\":[{\"name\":\"agent\",\"type\":\"LONG\",\"collection\":false,\"value\":\"data:self\"}],\"pagination\":{\"p\":\"0\",\"c\":\"10\"}}"
+      ],
+      "exposed" : false
+    },
+    "quotaCarbone_selected" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : false
+    },
+    "quotaCarbone_1" : {
+      "type" : "businessdata",
+      "value" : [
+        "{\"displayValue\":\"find [com.company.model.QuotaCarbone]\",\"businessObjectName\":\"QuotaCarbone\",\"query\":{\"name\":\"find\",\"displayName\":\"find\"},\"id\":\"com.company.model.QuotaCarbone\",\"filters\":[],\"pagination\":{\"p\":\"0\",\"c\":\"10\"}}"
+      ],
+      "exposed" : false
+    },
+    "quotaCarbone_1_selected" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : false
+    },
+    "quotaCarbone_2" : {
+      "type" : "businessdata",
+      "value" : [
+        "{\"displayValue\":\"findByAgent [com.company.model.QuotaCarbone]\",\"businessObjectName\":\"QuotaCarbone\",\"query\":{\"name\":\"findByAgent\",\"displayName\":\"findByAgent\"},\"id\":\"com.company.model.QuotaCarbone\",\"filters\":[{\"name\":\"agent\",\"type\":\"LONG\",\"collection\":false,\"value\":\"selfquota\"}],\"pagination\":{\"p\":\"0\",\"c\":\"10\"}}"
+      ],
+      "exposed" : false
+    },
+    "quotaCarbone_2_selected" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : false
+    }
+  },
+  "assets" : [
+    {
+      "id" : "69b7ac00-ec5b-414b-8ed8-13b3f722dfe5",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "4aea33f5-e10f-46a2-b559-d0737af80f57",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "webResources" : [ ],
+  "hasValidationError" : false
+}
