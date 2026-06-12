@@ -10,6 +10,9 @@
                 <field type="FLOAT" length="255" name="coutCarbone" nullable="true" collection="false"/>
                 <field type="LONG" length="255" name="demandeur" nullable="true" collection="false"/>
                 <field type="LONG" length="255" name="manager" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="statut" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="dateDemande" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="dateValidation" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -17,8 +20,8 @@
         </businessObject>
         <businessObject qualifiedName="com.company.model.QuotaCarbone">
             <fields>
-                <field type="LONG" length="255" name="agent" nullable="true" collection="false"/>
-                <field type="FLOAT" length="255" name="montant" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="agent" nullable="false" collection="false"/>
+                <field type="FLOAT" length="255" name="montant" nullable="false" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
