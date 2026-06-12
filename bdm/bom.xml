@@ -13,6 +13,10 @@
                 <field type="INTEGER" length="255" name="statut" nullable="true" collection="false"/>
                 <field type="LOCALDATE" length="255" name="dateDemande" nullable="true" collection="false"/>
                 <field type="LOCALDATE" length="255" name="dateValidation" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="besoinDoubleApprobation" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="choixRSE" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="choixManager" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="decisionCollegiale" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
