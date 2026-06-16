@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "e6ea8dc7-f06a-45d0-abea-6e609fcb0fbe",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1781621974625,
+  "lastUpdate" : 1781627708397,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -942,7 +942,8 @@
                     "value" : "Ok"
                   },
                   "dataToSend" : {
-                    "type" : "constant"
+                    "type" : "expression",
+                    "value" : "formOutput"
                   },
                   "dataFromError" : {
                     "type" : "variable",
@@ -1103,23 +1104,24 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "if( $data.mission ){",
-        "\treturn {",
-        "\t\t//map mission variable to expected task contract input",
-        "\t\tmissionInput: {",
-        "\t\t\tprojet: $data.mission.projet !== undefined ? $data.mission.projet : null,",
-        "\t\t\tlieu: $data.mission.lieu !== undefined ? $data.mission.lieu : null,",
-        "\t\t\tdateDebut: $data.mission.dateDebut !== undefined ? $data.mission.dateDebut : null,",
-        "\t\t\tdateFin: $data.mission.dateFin !== undefined ? $data.mission.dateFin : null,",
-        "\t\t\tcoutCarbone: $data.mission.coutCarbone !== undefined ? $data.mission.coutCarbone : null,",
-        "\t\t\tdemandeur: $data.mission.demandeur !== undefined ? $data.mission.demandeur : null,",
-        "\t\t\tmanager: $data.mission.manager !== undefined ? $data.mission.manager : null,",
-        "\t\t\tstatut: $data.mission.statut !== undefined ? $data.mission.statut : null,",
-        "\t\t\tdateDemande: $data.mission.dateDemande !== undefined ? $data.mission.dateDemande : null,",
-        "\t\t\tdateValidation: $data.mission.dateValidation !== undefined ? $data.mission.dateValidation : null",
-        "\t\t}",
-        "\t}",
-        "}"
+        "if ($data.mission) {\r",
+        "    return {\r",
+        "        missionInput: {\r",
+        "            projet: $data.mission.projet !== undefined ? $data.mission.projet : null,\r",
+        "            lieu: $data.mission.lieu !== undefined ? $data.mission.lieu : null,\r",
+        "            dateDebut: $data.mission.dateDebut !== undefined ? $data.mission.dateDebut : null,\r",
+        "            dateFin: $data.mission.dateFin !== undefined ? $data.mission.dateFin : null,\r",
+        "            coutCarbone: $data.mission.coutCarbone !== undefined ? $data.mission.coutCarbone : null,\r",
+        "            demandeur: $data.mission.demandeur !== undefined ? $data.mission.demandeur : null,\r",
+        "            manager: $data.mission.manager !== undefined ? $data.mission.manager : null,\r",
+        "            statut: $data.mission.statut !== undefined ? $data.mission.statut : null,\r",
+        "            dateDemande: $data.mission.dateDemande !== undefined ? $data.mission.dateDemande : null,\r",
+        "            dateValidation: $data.mission.dateValidation !== undefined ? $data.mission.dateValidation : null\r",
+        "        }\r",
+        "    };\r",
+        "}\r",
+        "\r",
+        "return {};"
       ],
       "exposed" : false
     },

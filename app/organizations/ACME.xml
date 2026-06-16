@@ -759,5 +759,10 @@
       <roleName>Manager</roleName>
       <groupName>acme</groupName>
     </membership>
+    <membership>
+      <userName>zachary.williamson</userName>
+      <roleName>ResponsableCSE</roleName>
+      <groupName>acme</groupName>
+    </membership>
   </memberships>
 </organization:Organization>
