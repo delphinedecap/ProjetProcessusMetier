@@ -444,7 +444,7 @@
         </elements>
       </elements>
       <elements xmi:type="process:Lane" xmi:id="_eJxYsGY4EfG2XcJ39Idavg" name="Manager" actor="_HwJFFmY4EfG2XcJ39Idavg">
-        <elements xmi:type="process:Task" xmi:id="_36334GY7EfG2XcJ39Idavg" name="Copie de Donner avis RSE" outgoing="_lw-d0GY8EfG2XcJ39Idavg" incoming="_BgHT0GY8EfG2XcJ39Idavg" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_36334GY7EfG2XcJ39Idavg" name="Donner avis Manager" outgoing="_lw-d0GY8EfG2XcJ39Idavg" incoming="_BgHT0GY8EfG2XcJ39Idavg" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_36334WY7EfG2XcJ39Idavg" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_36334mY7EfG2XcJ39Idavg" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_363342Y7EfG2XcJ39Idavg" name="" content="" returnTypeFixed="true"/>
