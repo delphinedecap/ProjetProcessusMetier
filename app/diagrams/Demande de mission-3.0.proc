@@ -56,7 +56,7 @@
               <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_GRGI8WY3EfGqCtCR6fgowA" name="mission" dataType="_GRGJv2Y3EfGqCtCR6fgowA" className="com.company.model.Mission"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_GRGI8mY3EfGqCtCR6fgowA" name="missionInput.coutCarbone" content="missionInput?.distance?.toDouble()" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Double">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_LW3PIGY_EfGqCtCR6fgowA" name="missionInput" type="COMPLEX" createMode="false"/>
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_23h80GZBEfGqCtCR6fgowA" name="missionInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_GRGI9GY3EfGqCtCR6fgowA" type="JAVA_METHOD" expression="setDistance">
               <inputTypes>java.lang.Double</inputTypes>
@@ -103,13 +103,22 @@
               <inputTypes>java.time.LocalDate</inputTypes>
             </operator>
           </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_tNsUwGZBEfGqCtCR6fgowA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_tNsUwWZBEfGqCtCR6fgowA" name="mission" content="mission" type="TYPE_VARIABLE" returnType="com.company.model.Mission">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_uQwUQGZBEfGqCtCR6fgowA" name="mission" dataType="_GRGJv2Y3EfGqCtCR6fgowA" className="com.company.model.Mission"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_tNsUwmZBEfGqCtCR6fgowA" name="newScript()" content="mission.moyenTransport" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.Mission">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_zLmdoGZBEfGqCtCR6fgowA" name="mission" dataType="_GRGJv2Y3EfGqCtCR6fgowA" className="com.company.model.Mission"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_tNsUw2ZBEfGqCtCR6fgowA" type="ASSIGNMENT"/>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_GRGJDGY3EfGqCtCR6fgowA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_GRGJDWY3EfGqCtCR6fgowA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_GRGJDmY3EfGqCtCR6fgowA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_GRGJD2Y3EfGqCtCR6fgowA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_GRGJEGY3EfGqCtCR6fgowA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_GRGJEWY3EfGqCtCR6fgowA">
-            <targetForm xmi:type="expression:Expression" xmi:id="_awgIEGY-EfGqCtCR6fgowA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_KfnPUGZFEfGqCtCR6fgowA" name="newForm6" content="687f4bbf-d578-4c6e-9d73-a5bbbbe312f5" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_GRGJE2Y3EfGqCtCR6fgowA">
             <inputs xmi:type="process:ContractInput" xmi:id="_GRGJFGY3EfGqCtCR6fgowA" name="missionInput" type="COMPLEX" dataReference="mission" createMode="false">
@@ -223,7 +232,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_GRGJYmY3EfGqCtCR6fgowA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_GRGJY2Y3EfGqCtCR6fgowA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_GRGJZGY3EfGqCtCR6fgowA">
-            <targetForm xmi:type="expression:Expression" xmi:id="_awgvIGY-EfGqCtCR6fgowA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_Ns7uoWY_EfGqCtCR6fgowA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_GRGJZmY3EfGqCtCR6fgowA">
             <inputs xmi:type="process:ContractInput" xmi:id="_GRGJZ2Y3EfGqCtCR6fgowA" name="missionInput" type="COMPLEX" dataReference="mission" createMode="false">
@@ -254,8 +263,8 @@
           <connectors xmi:type="process:Connector" xmi:id="_Wb1VQGY7EfGqCtCR6fgowA" name="API_Impact" definitionId="rest-get" event="ON_ENTER" definitionVersion="1.4.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_Wb1VQWY7EfGqCtCR6fgowA" definitionId="rest-get" version="1.4.0" modelVersion="8">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_Wb1VQmY7EfGqCtCR6fgowA" key="url">
-                <expression xmi:type="expression:Expression" xmi:id="_Wb1VQ2Y7EfGqCtCR6fgowA" name="url()" content="&quot;https://impactco2.fr/api/v1/transport?km=&quot; + mission.distance + &quot;&amp;transports=6&amp;apikey=51198b04-e272-40d0-b80a-6971d5c5c364&quot;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
-                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_HuhhYGY9EfGqCtCR6fgowA" name="mission" dataType="_GRGJv2Y3EfGqCtCR6fgowA" className="com.company.model.Mission"/>
+                <expression xmi:type="expression:Expression" xmi:id="_Wb1VQ2Y7EfGqCtCR6fgowA" name="url()" content="&quot;https://impactco2.fr/api/v1/transport?km=&quot; + mission.distance + &quot;&amp;transports=&quot; + mission.moyenTransport + &quot;&amp;apikey=51198b04-e272-40d0-b80a-6971d5c5c364&quot;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_BioGMGZFEfGqCtCR6fgowA" name="mission" dataType="_GRGJv2Y3EfGqCtCR6fgowA" className="com.company.model.Mission"/>
                 </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_Wb1VRGY7EfGqCtCR6fgowA" key="urlCookies">
@@ -466,7 +475,7 @@
         </defaultValue>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_GRGJgWY3EfGqCtCR6fgowA">
-        <targetForm xmi:type="expression:Expression" xmi:id="_awgvIWY-EfGqCtCR6fgowA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_Ns7uomY_EfGqCtCR6fgowA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_GRGJg2Y3EfGqCtCR6fgowA">
         <targetForm xmi:type="expression:Expression" xmi:id="_GRGJhGY3EfGqCtCR6fgowA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
