@@ -12,28 +12,6 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_98b4WGDCEfGY0qGQ08NUOw" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_98b4WWDCEfGY0qGQ08NUOw" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_98b4WmDCEfGY0qGQ08NUOw" name="" content="" returnTypeFixed="true"/>
-          <operations xmi:type="expression:Operation" xmi:id="_fFwpYGZEEfG2XcJ39Idavg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_fFxQcGZEEfG2XcJ39Idavg" name="mesDemandes" content="mesDemandes" type="TYPE_VARIABLE" returnType="java.util.List">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_fFxQcWZEEfG2XcJ39Idavg" name="mesDemandes" multiple="true" dataType="_98b4hGDCEfGY0qGQ08NUOw" className="com.company.model.Mission"/>
-            </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_fFxQcmZEEfG2XcJ39Idavg" name="mesDemandesInput" content="def missionList = []&#xD;&#xA;//For each item collected in multiple input&#xD;&#xA;     .each{&#xD;&#xA;&#x9;//Add Mission instance&#xD;&#xA;&#x9;missionList.add({ currentMissionInput ->&#xD;&#xA;&#x9;&#x9;def missionVar = mesDemandes.find { it.persistenceId.toString() == currentMissionInput.persistenceId_string} ?: new com.company.model.Mission()&#xD;&#xA;&#x9;&#x9;missionVar.projet = currentMissionInput.projet&#xD;&#xA;&#x9;&#x9;missionVar.lieu = currentMissionInput.lieu&#xD;&#xA;&#x9;&#x9;missionVar.dateDebut = currentMissionInput.dateDebut&#xD;&#xA;&#x9;&#x9;missionVar.dateFin = currentMissionInput.dateFin&#xD;&#xA;&#x9;&#x9;missionVar.coutCarbone = currentMissionInput.coutCarbone?.toFloat()&#xD;&#xA;&#x9;&#x9;missionVar.demandeur = currentMissionInput.demandeur?.trim() ? currentMissionInput.demandeur.toLong() : null&#xD;&#xA;&#x9;&#x9;missionVar.manager = currentMissionInput.manager?.trim() ? currentMissionInput.manager.toLong() : null&#xD;&#xA;&#x9;&#x9;missionVar.statut = currentMissionInput.statut&#xD;&#xA;&#x9;&#x9;missionVar.dateDemande = currentMissionInput.dateDemande&#xD;&#xA;&#x9;&#x9;missionVar.dateValidation = currentMissionInput.dateValidation&#xD;&#xA;&#x9;&#x9;missionVar.besoinDoubleApprobation = currentMissionInput.besoinDoubleApprobation&#xD;&#xA;&#x9;&#x9;missionVar.choixRSE = currentMissionInput.choixRSE&#xD;&#xA;&#x9;&#x9;missionVar.choixManager = currentMissionInput.choixManager&#xD;&#xA;&#x9;&#x9;missionVar.decisionCollegiale = currentMissionInput.decisionCollegiale&#xD;&#xA;&#x9;&#x9;return missionVar&#xD;&#xA;&#x9;}(it))&#xD;&#xA;}&#xD;&#xA;return missionList" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_fFxQdGZEEfG2XcJ39Idavg" name="mesDemandes" multiple="true" dataType="_98b4hGDCEfGY0qGQ08NUOw" className="com.company.model.Mission"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_fFxQdWZEEfG2XcJ39Idavg" type="ASSIGNMENT" expression="addAll">
-              <inputTypes>java.util.Collection</inputTypes>
-            </operator>
-          </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_mdIfkmZEEfG2XcJ39Idavg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_mdIfk2ZEEfG2XcJ39Idavg" name="mesDemandes" content="mesDemandes" type="TYPE_VARIABLE" returnType="java.util.List">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_mdIflGZEEfG2XcJ39Idavg" name="mesDemandes" multiple="true" dataType="_98b4hGDCEfGY0qGQ08NUOw" className="com.company.model.Mission"/>
-            </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_mdIflWZEEfG2XcJ39Idavg" name="mesDemandesInput" content="def missionList = []&#xD;&#xA;//For each item collected in multiple input&#xD;&#xA;     .each{&#xD;&#xA;&#x9;//Add Mission instance&#xD;&#xA;&#x9;missionList.add({ currentMissionInput ->&#xD;&#xA;&#x9;&#x9;def missionVar = mesDemandes.find { it.persistenceId.toString() == currentMissionInput.persistenceId_string} ?: new com.company.model.Mission()&#xD;&#xA;&#x9;&#x9;missionVar.projet = currentMissionInput.projet&#xD;&#xA;&#x9;&#x9;missionVar.lieu = currentMissionInput.lieu&#xD;&#xA;&#x9;&#x9;missionVar.dateDebut = currentMissionInput.dateDebut&#xD;&#xA;&#x9;&#x9;missionVar.dateFin = currentMissionInput.dateFin&#xD;&#xA;&#x9;&#x9;missionVar.coutCarbone = currentMissionInput.coutCarbone?.toFloat()&#xD;&#xA;&#x9;&#x9;missionVar.demandeur = currentMissionInput.demandeur?.trim() ? currentMissionInput.demandeur.toLong() : null&#xD;&#xA;&#x9;&#x9;missionVar.manager = currentMissionInput.manager?.trim() ? currentMissionInput.manager.toLong() : null&#xD;&#xA;&#x9;&#x9;missionVar.statut = currentMissionInput.statut&#xD;&#xA;&#x9;&#x9;missionVar.dateDemande = currentMissionInput.dateDemande&#xD;&#xA;&#x9;&#x9;missionVar.dateValidation = currentMissionInput.dateValidation&#xD;&#xA;&#x9;&#x9;missionVar.besoinDoubleApprobation = currentMissionInput.besoinDoubleApprobation&#xD;&#xA;&#x9;&#x9;missionVar.choixRSE = currentMissionInput.choixRSE&#xD;&#xA;&#x9;&#x9;missionVar.choixManager = currentMissionInput.choixManager&#xD;&#xA;&#x9;&#x9;missionVar.decisionCollegiale = currentMissionInput.decisionCollegiale&#xD;&#xA;&#x9;&#x9;return missionVar&#xD;&#xA;&#x9;}(it))&#xD;&#xA;}&#xD;&#xA;return missionList" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_mdIfl2ZEEfG2XcJ39Idavg" name="mesDemandes" multiple="true" dataType="_98b4hGDCEfGY0qGQ08NUOw" className="com.company.model.Mission"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_mdIfmGZEEfG2XcJ39Idavg" type="ASSIGNMENT" expression="addAll">
-              <inputTypes>java.util.Collection</inputTypes>
-            </operator>
-          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_98b4W2DCEfGY0qGQ08NUOw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_98b4XGDCEfGY0qGQ08NUOw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_98b4XWDCEfGY0qGQ08NUOw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -58,13 +36,6 @@
           </configuration>
         </filters>
       </elements>
-      <data xmi:type="process:BusinessObjectData" xmi:id="_5HWIgGYvEfG2XcJ39Idavg" name="mesDemandes" multiple="true" dataType="_98b4hGDCEfGY0qGQ08NUOw" className="com.company.model.Mission">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_6S8lsmY_EfG2XcJ39Idavg" name="initMesDemandes()" content="import org.bonitasoft.engine.identity.UserNotFoundException&#xD;&#xA;&#xD;&#xA;def userId = null&#xD;&#xA;&#xD;&#xA;try {&#xD;&#xA;    userId = apiAccessor.getProcessAPI()&#xD;&#xA;        .getProcessInstance(processInstanceId)&#xD;&#xA;        .getStartedBy()&#xD;&#xA;} catch (Exception e) {&#xD;&#xA;    return []&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;return missionDAO.findByDemandeur(userId, 0, 100)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
-          <referencedElements xmi:type="expression:Expression" xmi:id="_CJ7eEGl3EfGP0MN34FqZSg" name="missionDAO" content="missionDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.MissionDAO" returnTypeFixed="true"/>
-          <referencedElements xmi:type="expression:Expression" xmi:id="_CJ8FIGl3EfGP0MN34FqZSg" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
-          <referencedElements xmi:type="expression:Expression" xmi:id="_CJ8FIWl3EfGP0MN34FqZSg" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
-        </defaultValue>
-      </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_98b4ZGDCEfGY0qGQ08NUOw">
         <targetForm xmi:type="expression:Expression" xmi:id="_ML7ugGl3EfGP0MN34FqZSg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
