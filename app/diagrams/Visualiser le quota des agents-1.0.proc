@@ -2,7 +2,7 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:connectorconfiguration="http://www.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/bpm/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/bpm/process">
   <process:MainProcess xmi:id="_22OOIGDDEfGY0qGQ08NUOw" name="Visualiser le quota des agents" bonitaModelVersion="8">
     <elements xmi:type="process:Pool" xmi:id="_22OOIWDDEfGY0qGQ08NUOw" name="Visualiser les quotas des agents">
-      <elements xmi:type="process:Lane" xmi:id="_22OOImDDEfGY0qGQ08NUOw" name="Manager" actor="_ngM9kGYtEfGz1Ym7HCRQpA">
+      <elements xmi:type="process:Lane" xmi:id="_22OOImDDEfGY0qGQ08NUOw" name="Manager ou RSE" actor="_YWqXYGpmEfG1IJ0Ude5bDg">
         <elements xmi:type="process:StartEvent" xmi:id="_22OOI2DDEfGY0qGQ08NUOw" name="Démarrer1" outgoing="_VNNqMGY0EfG2XcJ39Idavg">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_22OOJGDDEfGY0qGQ08NUOw" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_22OOJWDDEfGY0qGQ08NUOw" name="" content="" returnTypeFixed="true"/>
@@ -35,6 +35,13 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_22OONmDDEfGY0qGQ08NUOw" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_22OON2DDEfGY0qGQ08NUOw" name="" content="" returnTypeFixed="true"/>
         </elements>
+        <filters xmi:type="process:ActorFilter" xmi:id="_jmDoAGpmEfG1IJ0Ude5bDg" name="initiateur" definitionId="bonita-actorfilter-initiator" definitionVersion="1.0">
+          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_jmDoAWpmEfG1IJ0Ude5bDg" definitionId="bonita-actorfilter-initiator" version="1.0">
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_jmDoAmpmEfG1IJ0Ude5bDg" key="autoAssign">
+              <expression xmi:type="expression:Expression" xmi:id="_jmDoA2pmEfG1IJ0Ude5bDg" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+            </parameters>
+          </configuration>
+        </filters>
       </elements>
       <data xmi:type="process:BusinessObjectData" xmi:id="_lfWb8GY0EfG2XcJ39Idavg" name="quotas" multiple="true" dataType="_22OObWDDEfGY0qGQ08NUOw" className="com.company.model.QuotaCarbone">
         <defaultValue xmi:type="expression:Expression" xmi:id="_lfWb8WY0EfG2XcJ39Idavg" name="init_quotas()" content="def quotas = quotaCarboneDAO.find(0, 100)&#xD;&#xA;&#xD;&#xA;return quotas" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
@@ -58,6 +65,7 @@
       <actors xmi:type="process:Actor" xmi:id="_22OOUmDDEfGY0qGQ08NUOw" documentation="Ceci est un exemple d'acteur associé à tous les utilisateurs d'ACME" name="Employee actor"/>
       <actors xmi:type="process:Actor" xmi:id="_22OOU2DDEfGY0qGQ08NUOw" name="Agent"/>
       <actors xmi:type="process:Actor" xmi:id="_ngM9kGYtEfGz1Ym7HCRQpA" name="Manager" initiator="true"/>
+      <actors xmi:type="process:Actor" xmi:id="_YWqXYGpmEfG1IJ0Ude5bDg" name="Manager ou RSE"/>
       <contract xmi:type="process:Contract" xmi:id="_22OOVWDDEfGY0qGQ08NUOw"/>
       <searchIndexes xmi:type="process:SearchIndex" xmi:id="_22OOVmDDEfGY0qGQ08NUOw">
         <name xmi:type="expression:Expression" xmi:id="_22OOV2DDEfGY0qGQ08NUOw" content="" returnTypeFixed="true"/>
