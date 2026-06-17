@@ -604,10 +604,8 @@
                           "value" : "Select an option"
                         },
                         "availableValues" : {
-                          "type" : "constant",
-                          "value" : [
-                            "optionsManagers"
-                          ]
+                          "type" : "expression",
+                          "value" : "optionsManagers"
                         },
                         "displayedKey" : {
                           "type" : "constant",
