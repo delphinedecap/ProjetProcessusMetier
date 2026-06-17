@@ -52,8 +52,8 @@
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_hZTZsmDDEfGY0qGQ08NUOw" documentation="Ceci est un exemple d'acteur associé à tous les utilisateurs d'ACME" name="Employee actor"/>
       <actors xmi:type="process:Actor" xmi:id="_hZTZs2DDEfGY0qGQ08NUOw" name="Agent"/>
-      <actors xmi:type="process:Actor" xmi:id="_4mMOIGYtEfGz1Ym7HCRQpA" name="Manager" initiator="true"/>
-      <actors xmi:type="process:Actor" xmi:id="_f4WnMGpmEfG1IJ0Ude5bDg" name="Manager ou RSE"/>
+      <actors xmi:type="process:Actor" xmi:id="_4mMOIGYtEfGz1Ym7HCRQpA" name="Manager"/>
+      <actors xmi:type="process:Actor" xmi:id="_f4WnMGpmEfG1IJ0Ude5bDg" name="Manager ou RSE" initiator="true"/>
       <contract xmi:type="process:Contract" xmi:id="_hZTZtGDDEfGY0qGQ08NUOw"/>
       <searchIndexes xmi:type="process:SearchIndex" xmi:id="_hZTZtWDDEfGY0qGQ08NUOw">
         <name xmi:type="expression:Expression" xmi:id="_hZTZtmDDEfGY0qGQ08NUOw" content="" returnTypeFixed="true"/>
