@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connectorconfiguration:ConnectorConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://www.bonitasoft.org/model/connector/configuration" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" definitionId="bonita-actorfilter-single-user" version="1.0.0" name="managerUser">
+  <parameters key="userId">
+    <expression xsi:type="expression:Expression" name="userId()" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true"/>
+  </parameters>
+</connectorconfiguration:ConnectorConfiguration>
