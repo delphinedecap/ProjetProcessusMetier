@@ -49,7 +49,7 @@
         </defaultValue>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_22OORWDDEfGY0qGQ08NUOw">
-        <targetForm xmi:type="expression:Expression" xmi:id="_Is2w4GsqEfGRboW8vujaZg" name="FormVIsualiserLesQuotas" content="08010cbf-77d7-4a26-95b3-ea2120684348" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_Is2w4GsqEfGRboW8vujaZg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_22OOR2DDEfGY0qGQ08NUOw">
         <targetForm xmi:type="expression:Expression" xmi:id="_22OOSGDDEfGY0qGQ08NUOw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>

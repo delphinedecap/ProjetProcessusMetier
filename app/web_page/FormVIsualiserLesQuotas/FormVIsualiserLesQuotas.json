@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "08010cbf-77d7-4a26-95b3-ea2120684348",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1781803800213,
+  "lastUpdate" : 1781805538719,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -277,7 +277,7 @@
                             },
                             "type" : {
                               "type" : "constant",
-                              "value" : "number"
+                              "value" : "text"
                             },
                             "dimension" : {
                               "type" : "constant",
@@ -285,11 +285,37 @@
                             },
                             "value" : {
                               "type" : "variable",
-                              "value" : "quotaCarbone_selected.agent"
+                              "value" : "agentNom"
                             },
                             "required" : {
                               "type" : "constant",
                               "value" : true
+                            },
+                            "allowHTML" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "minLength" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "maxLength" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "debounce" : {
+                              "type" : "constant",
+                              "value" : 0
+                            },
+                            "min" : {
+                              "type" : "constant"
+                            },
+                            "max" : {
+                              "type" : "constant"
+                            },
+                            "step" : {
+                              "type" : "constant",
+                              "value" : 1
                             }
                           },
                           "reference" : "1a01e1a6-b2e4-44fc-984e-e77d01d0f432",
@@ -391,7 +417,99 @@
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
-            [ ]
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "disabled" : {
+                    "type" : "expression",
+                    "value" : "$form.$invalid"
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "Ok"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "center"
+                  },
+                  "buttonStyle" : {
+                    "type" : "constant",
+                    "value" : "primary"
+                  },
+                  "action" : {
+                    "type" : "constant",
+                    "value" : "Submit task"
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable"
+                  },
+                  "dataToSend" : {
+                    "type" : "constant"
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable"
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "dataFromError" : {
+                    "type" : "variable",
+                    "value" : "formOutput._submitError"
+                  },
+                  "targetUrlOnSuccess" : {
+                    "type" : "interpolation",
+                    "value" : "/bonita"
+                  },
+                  "collectionToModify" : {
+                    "type" : "variable"
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "collectionPosition" : {
+                    "type" : "constant",
+                    "value" : "Last"
+                  },
+                  "valueToAdd" : {
+                    "type" : "constant"
+                  },
+                  "removeItem" : {
+                    "type" : "variable"
+                  }
+                },
+                "reference" : "3a3cff2b-bc61-46ff-9200-337c4aebd1a8",
+                "hasValidationError" : false,
+                "id" : "pbButton"
+              }
+            ]
           ]
         }
       }
@@ -464,6 +582,24 @@
         "        agent: q.agent",
         "    };",
         "});"
+      ],
+      "exposed" : false
+    },
+    "agentUser" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/user/{{quotaCarbone_selected.agent}}"
+      ],
+      "exposed" : false
+    },
+    "agentNom" : {
+      "type" : "expression",
+      "value" : [
+        "if (!$data.agentUser) {\r",
+        "    return \"\";\r",
+        "}\r",
+        "\r",
+        "return ($data.agentUser.firstname || \"\") + \" \" + ($data.agentUser.lastname || \"\");"
       ],
       "exposed" : false
     }

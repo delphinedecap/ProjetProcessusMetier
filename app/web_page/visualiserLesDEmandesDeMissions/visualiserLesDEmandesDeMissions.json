@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "b9b476df-6a95-4a65-8552-e4feaf2bde32",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1781714248893,
+  "lastUpdate" : 1781805391387,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -642,7 +642,7 @@
                 },
                 "label" : {
                   "type" : "interpolation",
-                  "value" : "Manager"
+                  "value" : "Statut"
                 },
                 "labelPosition" : {
                   "type" : "constant",
@@ -657,7 +657,7 @@
                 },
                 "value" : {
                   "type" : "variable",
-                  "value" : "managerNom"
+                  "value" : "statutTexte"
                 },
                 "debounce" : {
                   "type" : "constant",
@@ -678,7 +678,7 @@
                   "value" : 1
                 }
               },
-              "reference" : "471fd2bb-9180-43b1-b388-04e60af04e86",
+              "reference" : "98bfa7e4-b4d0-4cbb-a3d0-7ce1df1d04d1",
               "hasValidationError" : false,
               "id" : "pbInput"
             }
@@ -857,8 +857,8 @@
               "dimension" : {
                 "xs" : 12,
                 "sm" : 12,
-                "md" : 12,
-                "lg" : 12
+                "md" : 6,
+                "lg" : 6
               },
               "propertyValues" : {
                 "cssClasses" : {
@@ -895,7 +895,7 @@
                 },
                 "label" : {
                   "type" : "interpolation",
-                  "value" : "Statut"
+                  "value" : "Manager"
                 },
                 "labelPosition" : {
                   "type" : "constant",
@@ -910,7 +910,7 @@
                 },
                 "value" : {
                   "type" : "variable",
-                  "value" : "statutTexte"
+                  "value" : "managerNom"
                 },
                 "debounce" : {
                   "type" : "constant",
@@ -931,7 +931,90 @@
                   "value" : 1
                 }
               },
-              "reference" : "98bfa7e4-b4d0-4cbb-a3d0-7ce1df1d04d1",
+              "reference" : "471fd2bb-9180-43b1-b388-04e60af04e86",
+              "hasValidationError" : false,
+              "id" : "pbInput"
+            },
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 6,
+                "lg" : 6
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "!demande_selected"
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "minLength" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "maxLength" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "readOnly" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Demandeur"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                },
+                "placeholder" : {
+                  "type" : "interpolation"
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "demandeurNom"
+                },
+                "debounce" : {
+                  "type" : "constant",
+                  "value" : 0
+                },
+                "type" : {
+                  "type" : "constant",
+                  "value" : "text"
+                },
+                "min" : {
+                  "type" : "constant"
+                },
+                "max" : {
+                  "type" : "constant"
+                },
+                "step" : {
+                  "type" : "constant",
+                  "value" : 1
+                }
+              },
+              "reference" : "9cfbeddd-a645-48bb-bc85-e3d0f5d27a8a",
               "hasValidationError" : false,
               "id" : "pbInput"
             }
@@ -1528,6 +1611,24 @@
         "});\r",
         "\r",
         "return moyen ? moyen.label : \"Moyen inconnu\";"
+      ],
+      "exposed" : false
+    },
+    "demandeurNom" : {
+      "type" : "expression",
+      "value" : [
+        "if (!$data.demandeurUser) {\r",
+        "    return \"\";\r",
+        "}\r",
+        "\r",
+        "return ($data.demandeurUser.firstname || \"\") + \" \" + ($data.demandeurUser.lastname || \"\");"
+      ],
+      "exposed" : false
+    },
+    "demandeurUser" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/user/{{demande_selected.demandeur}}"
       ],
       "exposed" : false
     }
