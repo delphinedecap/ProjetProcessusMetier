@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "08010cbf-77d7-4a26-95b3-ea2120684348",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1781256179496,
+  "lastUpdate" : 1781803800213,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -105,6 +105,7 @@
                         "type" : "constant",
                         "value" : [
                           "Agent",
+                          "nom complet",
                           "Montant"
                         ]
                       },
@@ -139,6 +140,7 @@
                         "type" : "constant",
                         "value" : [
                           "agent",
+                          "nomComplet",
                           "montant"
                         ]
                       },
@@ -148,9 +150,17 @@
                       },
                       "content" : {
                         "type" : "expression",
-                        "value" : "quotaCarbone"
+                        "value" : "quotasenrichie"
                       },
                       "zebraStriping" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "striped" : {
                         "type" : "constant",
                         "value" : true
                       }
@@ -430,6 +440,30 @@
       "type" : "constant",
       "value" : [
         ""
+      ],
+      "exposed" : false
+    },
+    "users" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/user?p=0&c=200"
+      ],
+      "exposed" : false
+    },
+    "quotasenrichie" : {
+      "type" : "expression",
+      "value" : [
+        "if (!$data.quotaCarbone || !$data.users) { return []; }",
+        "var index = {};",
+        "$data.users.forEach(function(u) { index[u.id] = u; });",
+        "return $data.quotaCarbone.map(function(q) {",
+        "    var u = index[q.agent];",
+        "    return {",
+        "        nomComplet: u ? (u.firstname + ' ' + u.lastname) : '(inconnu)',",
+        "        montant: q.montant,",
+        "        agent: q.agent",
+        "    };",
+        "});"
       ],
       "exposed" : false
     }

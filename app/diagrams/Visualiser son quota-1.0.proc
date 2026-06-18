@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:connectorconfiguration="http://www.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/bpm/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/bpm/process">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:actormapping="http://www.bonitasoft.org/ns/actormapping/6.0" xmlns:configuration="http://www.bonitasoft.org/ns/bpm/configuration" xmlns:connectorconfiguration="http://www.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/bpm/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/bpm/process">
   <process:MainProcess xmi:id="_yuTWgGDDEfGY0qGQ08NUOw" name="Visualiser son quota" bonitaModelVersion="8">
     <elements xmi:type="process:Pool" xmi:id="_yuTWgWDDEfGY0qGQ08NUOw" name="Visualiser son quota">
       <elements xmi:type="process:Lane" xmi:id="_yuTWgmDDEfGY0qGQ08NUOw" name="Agent" actor="_yuTWo2DDEfGY0qGQ08NUOw">
@@ -37,17 +37,17 @@
         </filters>
       </elements>
       <data xmi:type="process:BusinessObjectData" xmi:id="_j--dEGYuEfG2XcJ39Idavg" name="selfQuota" dataType="_yuTWvGDDEfGY0qGQ08NUOw" className="com.company.model.QuotaCarbone">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_j--dEWYuEfG2XcJ39Idavg" name="init_selfQuota()" content="def processInitiatorId = apiAccessor.getProcessAPI()&#xD;&#xA;    .getProcessInstance(processInstanceId)&#xD;&#xA;    .getStartedBy()&#xD;&#xA;&#xD;&#xA;def quotas = quotaCarboneDAO.findByAgent(processInitiatorId, 0, 1)&#xD;&#xA;&#xD;&#xA;if (quotas == null || quotas.isEmpty()) {&#xD;&#xA;    return quotaCarboneDAO.newInstance(processInitiatorId, 1000000.0)&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;return quotas.get(0)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.QuotaCarbone">
-          <referencedElements xmi:type="expression:Expression" xmi:id="_UcYi0GY3EfG2XcJ39Idavg" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
-          <referencedElements xmi:type="expression:Expression" xmi:id="_UcYi0WY3EfG2XcJ39Idavg" name="quotaCarboneDAO" content="quotaCarboneDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.QuotaCarboneDAO" returnTypeFixed="true"/>
-          <referencedElements xmi:type="expression:Expression" xmi:id="_UcYi0mY3EfG2XcJ39Idavg" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+        <defaultValue xmi:type="expression:Expression" xmi:id="_PWJ78GsxEfGiyu45hca8Qg" name="initSelfQuota()" content="def agentId = apiAccessor.getProcessAPI()&#xD;&#xA;        .getProcessInstance(processInstanceId)&#xD;&#xA;        .getStartedBy()&#xD;&#xA;&#xD;&#xA;def quotas = quotaCarboneDAO.findByAgent(agentId, 0, 1)&#xD;&#xA;&#xD;&#xA;if (quotas == null || quotas.isEmpty()) {&#xD;&#xA;    def quota = new com.company.model.QuotaCarbone()&#xD;&#xA;    quota.setAgent(agentId)     &#xD;&#xA;    quota.setMontant(1000000.0)&#xD;&#xA;    return quota&#xD;&#xA;}&#xD;&#xA;return quotas.get(0)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.QuotaCarbone">
+          <referencedElements xmi:type="expression:Expression" xmi:id="_0yTloGs3EfGiyu45hca8Qg" name="quotaCarboneDAO" content="quotaCarboneDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.QuotaCarboneDAO" returnTypeFixed="true"/>
+          <referencedElements xmi:type="expression:Expression" xmi:id="_0yTloWs3EfGiyu45hca8Qg" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+          <referencedElements xmi:type="expression:Expression" xmi:id="_0yTloms3EfGiyu45hca8Qg" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
         </defaultValue>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_yuTWmGDDEfGY0qGQ08NUOw">
-        <targetForm xmi:type="expression:Expression" xmi:id="_6fkFYGY_EfGz1Ym7HCRQpA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="__m3nUGsqEfGRboW8vujaZg" name="FormInitQuota" content="edb94ddd-9ca0-45ee-9d00-6e099d9585cc" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_yuTWmmDDEfGY0qGQ08NUOw">
-        <targetForm xmi:type="expression:Expression" xmi:id="_yuTWm2DDEfGY0qGQ08NUOw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_yuTWm2DDEfGY0qGQ08NUOw" name="FormVisualiserMonQuota" content="e7bbe7a1-d77a-4eef-a8b4-18edc855e8ad" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </overviewFormMapping>
       <connections xmi:type="process:SequenceFlow" xmi:id="_yuTWnGDDEfGY0qGQ08NUOw" target="_yuTWh2DDEfGY0qGQ08NUOw" source="_yuTWg2DDEfGY0qGQ08NUOw">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_yuTWnWDDEfGY0qGQ08NUOw"/>
@@ -59,6 +59,36 @@
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_yuTWomDDEfGY0qGQ08NUOw" documentation="Ceci est un exemple d'acteur associé à tous les utilisateurs d'ACME" name="Employee actor"/>
       <actors xmi:type="process:Actor" xmi:id="_yuTWo2DDEfGY0qGQ08NUOw" name="Agent" initiator="true"/>
+      <configurations xmi:type="configuration:Configuration" xmi:id="_Gl4IMGsoEfGRboW8vujaZg" name="Production" version="8" username="william.jobs">
+        <actorMappings xmi:type="actormapping:ActorMappingsType" xmi:id="_Gl4vQGsoEfGRboW8vujaZg">
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_Gl4vQWsoEfGRboW8vujaZg" name="Employee actor">
+            <groups xmi:type="actormapping:Groups" xmi:id="_Gl4vQmsoEfGRboW8vujaZg">
+              <group>/acme</group>
+            </groups>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_Gl4vQ2soEfGRboW8vujaZg"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_Gl4vRGsoEfGRboW8vujaZg"/>
+            <users xmi:type="actormapping:Users" xmi:id="_Gl4vRWsoEfGRboW8vujaZg"/>
+          </actorMapping>
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_Gl4vRmsoEfGRboW8vujaZg" name="Agent">
+            <groups xmi:type="actormapping:Groups" xmi:id="_Gl4vR2soEfGRboW8vujaZg"/>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_Gl4vSGsoEfGRboW8vujaZg"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_Gl4vSWsoEfGRboW8vujaZg">
+              <role>member</role>
+            </roles>
+            <users xmi:type="actormapping:Users" xmi:id="_Gl4vSmsoEfGRboW8vujaZg"/>
+          </actorMapping>
+        </actorMappings>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_Gl4IMWsoEfGRboW8vujaZg" type="ACTOR_FILTER" definitionId="bonita-actorfilter-initiator" definitionVersion="1.0" implementationId="bonita-actorfilter-initiator-impl" implementationVersion="1.0.0"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_Gl4IMmsoEfGRboW8vujaZg" id="CONNECTOR"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_Gl4IM2soEfGRboW8vujaZg" id="GROOVY_SCRIPT"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_Gl4INGsoEfGRboW8vujaZg" id="ACTOR_FILTER">
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_Gl4INWsoEfGRboW8vujaZg" id="bonita-actorfilter-initiator-impl-1.0.0">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_Gl4INmsoEfGRboW8vujaZg" key="bonita-actorfilter-initiator-impl -- 1.0.0" value="bonita-actorfilter-initiator-1.0.0.jar" type="ACTOR_FILTER"/>
+          </children>
+        </processDependencies>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_Gl4IN2soEfGRboW8vujaZg" id="OTHER"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_Gl4IOGsoEfGRboW8vujaZg" id="GROOVY_SCRIPT"/>
+      </configurations>
       <contract xmi:type="process:Contract" xmi:id="_yuTWpGDDEfGY0qGQ08NUOw"/>
       <searchIndexes xmi:type="process:SearchIndex" xmi:id="_yuTWpWDDEfGY0qGQ08NUOw">
         <name xmi:type="expression:Expression" xmi:id="_yuTWpmDDEfGY0qGQ08NUOw" content="" returnTypeFixed="true"/>

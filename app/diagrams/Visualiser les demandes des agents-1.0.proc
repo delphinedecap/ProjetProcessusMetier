@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:connectorconfiguration="http://www.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/bpm/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/bpm/process">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:actormapping="http://www.bonitasoft.org/ns/actormapping/6.0" xmlns:configuration="http://www.bonitasoft.org/ns/bpm/configuration" xmlns:connectorconfiguration="http://www.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/bpm/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/bpm/process">
   <process:MainProcess xmi:id="_hZTZkGDDEfGY0qGQ08NUOw" name="Visualiser les demandes des agents" bonitaModelVersion="8">
     <elements xmi:type="process:Pool" xmi:id="_hZTZkWDDEfGY0qGQ08NUOw" name="Visualiser les demandes des agents">
       <elements xmi:type="process:Lane" xmi:id="_hZTZkmDDEfGY0qGQ08NUOw" name="Manager ou RSE" actor="_f4WnMGpmEfG1IJ0Ude5bDg">
@@ -37,7 +37,7 @@
         </filters>
       </elements>
       <formMapping xmi:type="process:FormMapping" xmi:id="_hZTZqGDDEfGY0qGQ08NUOw">
-        <targetForm xmi:type="expression:Expression" xmi:id="_pXDWQGpmEfG1IJ0Ude5bDg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_pXDWQGpmEfG1IJ0Ude5bDg" name="visualiserLesDEmandesDeMissions" content="b9b476df-6a95-4a65-8552-e4feaf2bde32" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_hZTZqmDDEfGY0qGQ08NUOw">
         <targetForm xmi:type="expression:Expression" xmi:id="_hZTZq2DDEfGY0qGQ08NUOw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -54,6 +54,53 @@
       <actors xmi:type="process:Actor" xmi:id="_hZTZs2DDEfGY0qGQ08NUOw" name="Agent"/>
       <actors xmi:type="process:Actor" xmi:id="_4mMOIGYtEfGz1Ym7HCRQpA" name="Manager"/>
       <actors xmi:type="process:Actor" xmi:id="_f4WnMGpmEfG1IJ0Ude5bDg" name="Manager ou RSE" initiator="true"/>
+      <configurations xmi:type="configuration:Configuration" xmi:id="_G1IFIGsoEfGRboW8vujaZg" name="Production" version="8" username="william.jobs">
+        <actorMappings xmi:type="actormapping:ActorMappingsType" xmi:id="_G1JTQGsoEfGRboW8vujaZg">
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_G1JTQWsoEfGRboW8vujaZg" name="Employee actor">
+            <groups xmi:type="actormapping:Groups" xmi:id="_G1JTQmsoEfGRboW8vujaZg">
+              <group>/acme</group>
+            </groups>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_G1JTQ2soEfGRboW8vujaZg"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_G1JTRGsoEfGRboW8vujaZg"/>
+            <users xmi:type="actormapping:Users" xmi:id="_G1JTRWsoEfGRboW8vujaZg"/>
+          </actorMapping>
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_G1JTRmsoEfGRboW8vujaZg" name="Agent">
+            <groups xmi:type="actormapping:Groups" xmi:id="_G1JTR2soEfGRboW8vujaZg"/>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_G1JTSGsoEfGRboW8vujaZg"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_G1JTSWsoEfGRboW8vujaZg">
+              <role>member</role>
+            </roles>
+            <users xmi:type="actormapping:Users" xmi:id="_G1JTSmsoEfGRboW8vujaZg"/>
+          </actorMapping>
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_G1JTS2soEfGRboW8vujaZg" name="Manager">
+            <groups xmi:type="actormapping:Groups" xmi:id="_G1JTTGsoEfGRboW8vujaZg"/>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_G1JTTWsoEfGRboW8vujaZg"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_G1JTTmsoEfGRboW8vujaZg">
+              <role>Manager</role>
+            </roles>
+            <users xmi:type="actormapping:Users" xmi:id="_G1JTT2soEfGRboW8vujaZg"/>
+          </actorMapping>
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_G1JTUGsoEfGRboW8vujaZg" name="Manager ou RSE">
+            <groups xmi:type="actormapping:Groups" xmi:id="_G1JTUWsoEfGRboW8vujaZg"/>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_G1JTUmsoEfGRboW8vujaZg"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_G1JTU2soEfGRboW8vujaZg">
+              <role>Manager</role>
+              <role>ResponsableCSE</role>
+            </roles>
+            <users xmi:type="actormapping:Users" xmi:id="_G1JTVGsoEfGRboW8vujaZg"/>
+          </actorMapping>
+        </actorMappings>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_G1IFIWsoEfGRboW8vujaZg" type="ACTOR_FILTER" definitionId="bonita-actorfilter-initiator" definitionVersion="1.0" implementationId="bonita-actorfilter-initiator-impl" implementationVersion="1.0.0"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_G1IFImsoEfGRboW8vujaZg" id="CONNECTOR"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_G1IFI2soEfGRboW8vujaZg" id="GROOVY_SCRIPT"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_G1IFJGsoEfGRboW8vujaZg" id="ACTOR_FILTER">
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_G1IFJWsoEfGRboW8vujaZg" id="bonita-actorfilter-initiator-impl-1.0.0">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_G1IFJmsoEfGRboW8vujaZg" key="bonita-actorfilter-initiator-impl -- 1.0.0" value="bonita-actorfilter-initiator-1.0.0.jar" type="ACTOR_FILTER"/>
+          </children>
+        </processDependencies>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_G1IFJ2soEfGRboW8vujaZg" id="OTHER"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_G1IFKGsoEfGRboW8vujaZg" id="GROOVY_SCRIPT"/>
+      </configurations>
       <contract xmi:type="process:Contract" xmi:id="_hZTZtGDDEfGY0qGQ08NUOw"/>
       <searchIndexes xmi:type="process:SearchIndex" xmi:id="_hZTZtWDDEfGY0qGQ08NUOw">
         <name xmi:type="expression:Expression" xmi:id="_hZTZtmDDEfGY0qGQ08NUOw" content="" returnTypeFixed="true"/>

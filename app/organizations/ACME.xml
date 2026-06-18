@@ -764,5 +764,10 @@
       <roleName>ResponsableCSE</roleName>
       <groupName>acme</groupName>
     </membership>
+    <membership>
+      <userName>giovanna.almeida</userName>
+      <roleName>Manager</roleName>
+      <groupName>acme</groupName>
+    </membership>
   </memberships>
 </organization:Organization>
